@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 迁出代码
-        users: actions/checkout@master
+        uses: actions/checkout@master
 
       - name: 安装node.js
-        users: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with: 
           node-version: 14.0.0
       
