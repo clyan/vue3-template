@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: 上传到服务器
-        run:  easingthemes/ssh-deploy@v2.1.5
+        uses:  easingthemes/ssh-deploy@v2.1.5
         env: 
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDzvO --delete"
