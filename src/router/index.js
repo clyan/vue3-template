@@ -8,7 +8,12 @@ const router = createRouter({
             component:Layout,
             children:[
                 {
-                    path:"/", component: () => import('views/home.vue') 
+                    path:"/", component: () => import('views/home.vue'),
+                    children:[
+                        {
+                            path:"/newApi", component: () => import('views/home.vue') 
+                        }
+                    ]
                 }
             ]
         }

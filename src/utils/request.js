@@ -7,10 +7,8 @@ const service = axios.create({
 })
 service.interceptors.request.use((config) => {
     config.headers['X-token'] = 'my token';
-    console.log("Aaa")
     return config;
 }, (error) => {
-    console.log(error);
     return Promise.reject(error);
 })  
 
@@ -37,9 +35,8 @@ service.interceptors.response.use((response) => {
         return res;
     }
 }, (error) => {
-    console.log(error);
     Message.error({
-        message: res.message || 'Error',
+        message: error || 'Error',
         duration: 5 * 1000,
     });
     return Promise.reject(error);

@@ -2,6 +2,7 @@ export default function Lifycle () {
     // 返回的是插件对象
     return {
       name: 'hooks-order', 
+      enfores:'post',
       // 初始化hooks，只走一次
       options(opts) {
         console.log('options', opts);
@@ -12,7 +13,9 @@ export default function Lifycle () {
       // vite特有钩子
       config(config) {
         console.log('config', config);
-        return {}
+        return {
+          
+        }
       },
       configResolved(resolvedCofnig) {
         console.log('configResolved');

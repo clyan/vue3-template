@@ -1,4 +1,4 @@
-export default [
+module.exports =  [
     {
       url: '/api/users',
       method: 'get',
